@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     viewTransition: true,
   },
   images: {
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {

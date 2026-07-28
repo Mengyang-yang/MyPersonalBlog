@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion'
+import type { Transition, Variants } from 'framer-motion'
 
 export const fadeIn: Variants = {
   initial: { opacity: 0 },
@@ -29,7 +29,7 @@ export const defaultTransition = {
   type: 'spring',
   stiffness: 100,
   damping: 20,
-}
+} satisfies Transition
 
 export const hoverScale = {
   scale: 1.05,

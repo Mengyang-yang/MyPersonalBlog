@@ -4,5 +4,5 @@
   "main": "worker.js",
   "compatibility_date": "2026-07-15",
   "assets": { "directory": "out", "binding": "ASSETS" },
-  "routes": [{ "pattern": "nextjs-mdx-blog.loke.dev", "custom_domain": true }]
+  "routes": [{ "pattern": "nextjs-mdx-blog.loke.dev", "custom_domain": true }],
 }

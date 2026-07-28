@@ -6,7 +6,7 @@ A minimalist blog template built with Next.js, MDX, and Tailwind CSS. Write post
 
 ## Features
 
-- **Next.js 15** — App Router with React 19 Server Components
+- **Next.js 16** — App Router with React 19 Server Components
 - **MDX Blog** — Write posts in Markdown with JSX components
 - **Tailwind CSS 4** — Utility-first styling with dark mode
 - **View Transitions** — Smooth page transitions via the View Transitions API
@@ -18,7 +18,7 @@ A minimalist blog template built with Next.js, MDX, and Tailwind CSS. Write post
 
 ## Stack
 
-- [Next.js 15](https://nextjs.org)
+- [Next.js 16](https://nextjs.org)
 - [React 19](https://react.dev)
 - [TypeScript](https://typescriptlang.org)
 - [Tailwind CSS 4](https://tailwindcss.com)
@@ -38,7 +38,24 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Requires Node.js v20+ and pnpm v8+.
+Requires Node.js 22.22.1+ and pnpm 11.17.0.
+
+## Verify
+
+Run the complete local quality gate before shipping:
+
+```bash
+pnpm check
+pnpm deploy:dry
+pnpm audit --prod --audit-level high
+```
+
+TypeScript 6 and ESLint 9 are intentional: they are the newest releases
+supported by the TypeScript ESLint and React lint plugins bundled with Next.js.
+The production audit is clean. A full development audit currently reports the
+ESLint toolchain's `brace-expansion` advisory; its patched major has an
+incompatible API, so it remains on the newest compatible release until the
+toolchain updates.
 
 ## Project Structure
 
@@ -81,7 +98,12 @@ This is the content of my post written in MDX.
 
 [Live demo](https://nextjs-mdx-blog.loke.dev)
 
-Works on any platform that supports Next.js.
+The static export works on any static host. After authenticating Wrangler,
+deploy it to the configured Cloudflare Worker with:
+
+```bash
+pnpm deploy
+```
 
 ## License
 

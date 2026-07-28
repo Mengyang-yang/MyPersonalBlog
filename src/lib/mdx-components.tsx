@@ -71,7 +71,7 @@ export const mdxComponents = {
     return <div className="not-prose mb-6">{children}</div>
   },
   img: ({ src, alt }: React.ImgHTMLAttributes<HTMLImageElement>) => {
-    if (!src) return null
+    if (typeof src !== 'string') return null
 
     return (
       <div className="my-6">

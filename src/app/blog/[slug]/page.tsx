@@ -19,62 +19,68 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false
 
-export default async function BlogPost(props: {
-  params: Promise<{ slug: string }>
-}) {
-  const { slug } = await props.params
-
+async function loadPost(slug: string) {
   try {
     const postsDirectory = path.join(process.cwd(), 'src/posts')
     const fullPath = path.join(postsDirectory, `${slug}.mdx`)
 
     const [post, fileContents] = await Promise.all([
       getPostBySlug(slug),
-      fs.readFile(fullPath, 'utf8').catch(() => null),
+      fs.readFile(fullPath, 'utf8'),
     ])
 
-    if (!fileContents) {
-      return notFound()
+    return {
+      post,
+      content: matter(fileContents).content,
     }
-
-    const { content } = matter(fileContents)
-
-    return (
-      <div className="container mx-auto max-w-4xl px-4 py-12">
-        <div className="mb-8">
-          <Button variant="outline" size="sm" asChild className="mb-6">
-            <Link href="/blog">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to all posts
-            </Link>
-          </Button>
-
-          <Card>
-            <CardHeader className="pb-4">
-              <h1 className="text-4xl font-bold tracking-tight">
-                {post.title}
-              </h1>
-              {post.date && (
-                <time className="text-muted-foreground text-sm">
-                  {new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </time>
-              )}
-            </CardHeader>
-            <Separator />
-            <CardContent className="pt-6">
-              <article className="prose prose-lg dark:prose-invert max-w-none">
-                <MDXProvider content={content} />
-              </article>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    )
   } catch {
-    return notFound()
+    return null
   }
+}
+
+export default async function BlogPost(props: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await props.params
+  const result = await loadPost(slug)
+
+  if (!result) {
+    notFound()
+  }
+
+  const { post, content } = result
+
+  return (
+    <div className="container mx-auto max-w-4xl px-4 py-12">
+      <div className="mb-8">
+        <Button variant="outline" size="sm" asChild className="mb-6">
+          <Link href="/blog">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to all posts
+          </Link>
+        </Button>
+
+        <Card>
+          <CardHeader className="pb-4">
+            <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>
+            {post.date && (
+              <time className="text-muted-foreground text-sm">
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
+            )}
+          </CardHeader>
+          <Separator />
+          <CardContent className="pt-6">
+            <article className="prose prose-lg dark:prose-invert max-w-none">
+              <MDXProvider content={content} />
+            </article>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  )
 }

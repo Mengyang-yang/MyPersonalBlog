@@ -1,19 +1,22 @@
-import { FlatCompat } from '@eslint/eslintrc'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
+import prettier from 'eslint-config-prettier/flat'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: {
+export default defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  {
     rules: {
       'react/no-unescaped-entities': 'off',
     },
   },
-})
-
-const eslintConfig = [
-  ...compat.config({
-    extends: ['next', 'next/typescript', 'eslint:recommended'],
-    rules: {},
-  }),
-]
-
-export default eslintConfig
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'build/**',
+    '.wrangler/**',
+    'next-env.d.ts',
+  ]),
+])
