@@ -47,15 +47,14 @@ Run the complete local quality gate before shipping:
 ```bash
 pnpm check
 pnpm deploy:dry
-pnpm audit --prod --audit-level high
+pnpm audit --audit-level high
 ```
 
 TypeScript 6 and ESLint 9 are intentional: they are the newest releases
 supported by the TypeScript ESLint and React lint plugins bundled with Next.js.
-The production audit is clean. A full development audit currently reports the
-ESLint toolchain's `brace-expansion` advisory; its patched major has an
-incompatible API, so it remains on the newest compatible release until the
-toolchain updates.
+The full dependency audit is clean. The patched `brace-expansion` release is
+enforced across the lint graph with a small CommonJS compatibility patch for
+legacy `minimatch` consumers.
 
 ## Project Structure
 
