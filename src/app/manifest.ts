@@ -4,9 +4,10 @@ export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Next.js MDX Blog',
-    short_name: 'MDX Blog',
-    description: 'A modern blog template built with Next.js and MDX',
+    name: 'Mikeq95 Blog',
+    short_name: 'Mikeq95',
+    description:
+      "Mengyang Yang's personal blog about programming and technology",
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',

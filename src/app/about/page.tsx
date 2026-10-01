@@ -1,14 +1,6 @@
 'use client'
 
-import {
-  BookOpenIcon,
-  CameraIcon,
-  CodeIcon,
-  CoffeeIcon,
-  GlobeIcon,
-  HeartIcon,
-  MountainIcon,
-} from 'lucide-react'
+import { Code, HeartIcon, Music, PencilSparkles } from 'lucide-react'
 import {
   fadeIn,
   fadeInSlideLeft,
@@ -28,40 +20,27 @@ import {
 import { Separator } from '@/components/ui/separator'
 
 export default function About() {
-  const currentYear = new Date().getFullYear()
-  const startYear = 2017
-  const yearsOfExperience = currentYear - startYear
+  const studyStartYear = 2024
 
   const skills = [
     {
-      category: 'Frontend',
-      items: [
-        'React',
-        'Next.js',
-        'TypeScript',
-        'Tailwind CSS',
-        'Shadcn UI',
-        'Framer Motion',
-      ],
+      category: 'Languages',
+      items: ['C', 'C++', 'Swift'],
     },
     {
-      category: 'Backend',
-      items: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'tRPC'],
+      category: 'Web & Native UI',
+      items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'SwiftUI'],
     },
     {
-      category: 'DevOps',
-      items: ['Docker', 'CI/CD', 'Cloudflare Workers', 'GitHub Actions'],
+      category: 'Tools',
+      items: ['Git', 'VS Code'],
     },
-    { category: 'Tools', items: ['Git', 'VS Code', 'Figma'] },
   ]
 
   const interests = [
-    { name: 'Hiking', icon: <MountainIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Photography', icon: <CameraIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Open Source', icon: <GlobeIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Reading', icon: <BookOpenIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Coding', icon: <CodeIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Coffee', icon: <CoffeeIcon className="mr-2 h-4 w-4" /> },
+    { name: 'music', icon: <Music className="mr-2 h-4 w-4" /> },
+    { name: 'coding', icon: <Code className="mr-2 h-4 w-4" /> },
+    { name: 'writing', icon: <PencilSparkles className="mr-2 h-4 w-4" /> },
   ]
 
   return (
@@ -77,7 +56,7 @@ export default function About() {
                 <Animated variants={scaleIn} delay={0.2}>
                   <Avatar className="mb-4 h-32 w-32">
                     <AvatarFallback className="bg-primary text-primary-foreground text-xl">
-                      LC
+                      MY
                     </AvatarFallback>
                   </Avatar>
                 </Animated>
@@ -86,9 +65,8 @@ export default function About() {
                 </Animated>
                 <Animated variants={fadeInSlideUp} delay={0.4}>
                   <p className="text-muted-foreground">
-                    Hi there! This is a modern blog template built with Next.js
-                    and MDX. You can customize this section to tell your story
-                    and share your background with your readers.
+                    Hi, I'm Mengyang, an Electronic Information Engineering
+                    student who enjoys programming and building for the web.
                   </p>
                 </Animated>
               </div>
@@ -100,18 +78,16 @@ export default function About() {
                   <CardContent className="space-y-4">
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-muted-foreground">Sweden</p>
+                      <p className="text-muted-foreground">China</p>
                     </div>
                     <div>
-                      <p className="font-medium">Experience</p>
-                      <p className="text-muted-foreground">
-                        {yearsOfExperience} years
-                      </p>
+                      <p className="font-medium">Learning since</p>
+                      <p className="text-muted-foreground">{studyStartYear}</p>
                     </div>
                     <div>
                       <p className="font-medium">Focus</p>
                       <p className="text-muted-foreground">
-                        Web Development & UI/UX
+                        Programming & Web Development
                       </p>
                     </div>
                   </CardContent>
@@ -125,32 +101,29 @@ export default function About() {
                   <CardHeader>
                     <CardTitle>About Me</CardTitle>
                     <CardDescription>
-                      Frontend developer with a passion for clean UI and great
-                      UX
+                      Electronic Information Engineering student who enjoys
+                      programming and learning modern web technologies
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      Hi there! I'm a frontend developer with{' '}
-                      {yearsOfExperience} years of experience crafting modern,
-                      responsive, and accessible web applications. My journey in
-                      web development began in 2017, and I've been passionate
-                      about creating exceptional digital experiences ever since.
+                      Hi, I'm Mengyang, an Electronic Information Engineering
+                      student from China. I started learning programming in{' '}
+                      {studyStartYear} and enjoy exploring how software can turn
+                      ideas into useful tools.
                     </p>
                     <p>
-                      I specialize in building applications with React and
-                      Next.js, leveraging TypeScript for type safety and
-                      Tailwind CSS for beautiful, responsive designs. I'm
-                      particularly enthusiastic about component-driven
-                      development and creating reusable, maintainable UI
-                      systems.
+                      I am currently learning C, C++, and Swift, while also
+                      building web projects with React, Next.js, TypeScript,
+                      Tailwind CSS, and Node.js. I am especially interested in
+                      understanding both how software works and how to make it
+                      useful and easy to use.
                     </p>
                     <p>
-                      Throughout my career, I've worked on projects ranging from
-                      small business websites to complex web applications with
-                      thousands of users. I approach each project with attention
-                      to detail, focusing on performance optimization,
-                      accessibility, and creating intuitive user experiences.
+                      This blog is where I document what I learn, share
+                      projects, and reflect on my progress as a student and
+                      developer. I value curiosity, steady practice, and
+                      building a strong foundation one project at a time.
                     </p>
                   </CardContent>
                 </Card>
@@ -222,11 +195,7 @@ export default function About() {
                         <p className="flex items-center">
                           <HeartIcon className="mr-4 h-12 w-12 text-red-500" />
                           <span>
-                            When I'm not coding, you'll find me exploring new
-                            technologies, contributing to open source, or
-                            seeking inspiration in nature. I believe in
-                            continuous learning and strive to stay at the
-                            forefront of web development trends.
+                            I am passionate about music, coding, and writing. I
                           </span>
                         </p>
                       </div>

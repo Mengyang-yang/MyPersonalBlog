@@ -19,13 +19,15 @@ import {
 } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  description: 'Welcome to Next.js MDX Blog - A modern blog template',
+  description:
+    'Welcome to Mikeq95 Blog, a personal blog about programming and technology',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Next.js MDX Blog',
-    url: 'https://example.com',
-    description: 'A modern blog template built with Next.js and MDX',
+    siteName: 'Mikeq95 Blog',
+    url: 'https://www.mikeq95blog.uk',
+    description:
+      "Mengyang Yang's personal blog about programming and technology",
   },
 }
 
@@ -37,12 +39,13 @@ export default async function Home() {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Next.js MDX Blog',
-    url: 'https://example.com',
-    description: 'A modern blog template built with Next.js and MDX',
+    name: 'Mikeq95 Blog',
+    url: 'https://www.mikeq95blog.uk',
+    description:
+      "Mengyang Yang's personal blog about programming and technology",
     author: {
       '@type': 'Person',
-      name: 'Your Name',
+      name: 'Mengyang Yang',
     },
   }
 
@@ -159,7 +162,7 @@ export default async function Home() {
                 className="min-w-[200px]"
               >
                 <Link
-                  href="https://github.com/yourusername"
+                  href="https://github.com/Mengyang-yang"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -181,7 +184,7 @@ export default async function Home() {
                 className="min-w-[200px]"
               >
                 <Link
-                  href="https://twitter.com/yourusername"
+                  href="https://x.com/johnsomt5f1v?s=11"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -203,7 +206,7 @@ export default async function Home() {
                 className="min-w-[200px]"
               >
                 <Link
-                  href="https://instagram.com/yourusername"
+                  href="https://www.instagram.com/krismorrow1983?stkn=anNzNTUybHcza2l6&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

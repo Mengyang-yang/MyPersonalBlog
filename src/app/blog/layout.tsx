@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog | Next.js MDX Blog',
+  title: 'Blog | Mikeq95 Blog',
   description: 'Articles and thoughts from the blog',
 }
 

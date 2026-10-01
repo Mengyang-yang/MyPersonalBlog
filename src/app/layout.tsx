@@ -27,33 +27,35 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Next.js MDX Blog',
-    template: '%s | Next.js MDX Blog',
+    default: 'Mikeq95 Blog',
+    template: '%s | Mikeq95 Blog',
   },
-  metadataBase: new URL('https://nextjs-mdx-blog.loke.dev'),
-  description: 'A modern blog template built with Next.js and MDX',
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  metadataBase: new URL('https://www.mikeq95blog.uk'),
+  description: "Mengyang Yang's personal blog about programming and technology",
+  authors: [{ name: 'Mengyang Yang' }],
+  creator: 'Mengyang Yang',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://nextjs-mdx-blog.loke.dev',
-    siteName: 'Next.js MDX Blog',
-    title: 'Next.js MDX Blog',
-    description: 'A modern blog template built with Next.js and MDX',
+    url: 'https://www.mikeq95blog.uk',
+    siteName: 'Mikeq95 Blog',
+    title: 'Mikeq95 Blog',
+    description:
+      "Mengyang Yang's personal blog about programming and technology",
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Next.js MDX Blog',
+        alt: 'Mikeq95 Blog',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Next.js MDX Blog',
-    description: 'A modern blog template built with Next.js and MDX',
+    title: 'Mikeq95 Blog',
+    description:
+      "Mengyang Yang's personal blog about programming and technology",
     images: ['/og-image.png'],
   },
   robots: {

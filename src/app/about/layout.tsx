@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { JsonLd } from '@/components/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'Learn more about the author and their work',
+  title: 'Mikeq95 Blog - About',
+  description: 'Think independently, and distiguish right from wrong.',
 }
 
 export default function AboutLayout({
@@ -14,16 +14,21 @@ export default function AboutLayout({
   const personJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Your Name',
-    url: 'https://nextjs-mdx-blog.loke.dev',
-    jobTitle: 'Frontend Developer',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Example Company',
-    },
+    name: 'Mengyang Yang',
+    url: 'https://www.mikeq95blog.uk',
+    jobTitle: 'Electronic Information Engineering Student',
     description:
-      'Frontend developer specializing in React, Next.js and modern web technologies',
-    skills: 'React, Next.js, TypeScript, Tailwind CSS, Node.js',
+      'An Electronic Information Engineering student who enjoys programming and building software with modern web technologies.',
+    knowsAbout: [
+      'C',
+      'C++',
+      'Swift',
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Node.js',
+    ],
   }
 
   return (

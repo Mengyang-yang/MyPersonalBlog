@@ -4,5 +4,8 @@
   "main": "worker.js",
   "compatibility_date": "2026-07-15",
   "assets": { "directory": "out", "binding": "ASSETS" },
-  "routes": [{ "pattern": "nextjs-mdx-blog.loke.dev", "custom_domain": true }],
+  "routes": [
+    { "pattern": "www.mikeq95blog.uk", "custom_domain": true },
+    { "pattern": "mikeq95blog.uk", "custom_domain": true }
+  ]
 }

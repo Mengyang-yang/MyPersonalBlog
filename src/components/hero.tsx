@@ -37,13 +37,13 @@ export function Hero() {
             >
               <div className="bg-muted inline-block rounded-full px-4 py-1.5">
                 <p className="text-muted-foreground text-sm font-medium">
-                  Starter template
+                  Personal blog
                 </p>
               </div>
             </Animated>
             <Animated variants={fadeInSlideUp} delay={0.5}>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                Next.js MDX Blog
+                Mikeq95 Blog
               </h1>
             </Animated>
           </div>
@@ -53,8 +53,8 @@ export function Hero() {
             className="text-muted-foreground max-w-lg text-lg"
           >
             <p>
-              Web developer crafting elegant solutions with modern technologies.
-              Focused on creating impactful digital experiences.
+              An Electronic Information Engineering student learning programming
+              and building with modern web technologies.
             </p>
           </Animated>
           <Animated
@@ -63,8 +63,8 @@ export function Hero() {
             className="flex flex-wrap items-center gap-4"
           >
             <Button asChild size="lg" className="relative overflow-hidden">
-              <Link href="https://nextjs-mdx-blog.loke.dev">
-                <span className="relative z-10">Use this template</span>
+              <Link href="https://www.mikeq95blog.uk">
+                <span className="relative z-10">About me</span>
               </Link>
             </Button>
             <Button

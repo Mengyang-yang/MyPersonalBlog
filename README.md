@@ -1,4 +1,4 @@
-# Next.js MDX Blog Template
+# Mikeq95 Blog
 
 A minimalist blog template built with Next.js, MDX, and Tailwind CSS. Write posts in MDX, get server components, view transitions, and dark mode out of the box.
 
@@ -95,7 +95,7 @@ This is the content of my post written in MDX.
 
 ## Deploy
 
-[Live demo](https://nextjs-mdx-blog.loke.dev)
+[Live demo](https://www.mikeq95blog.uk)
 
 The static export works on any static host. After authenticating Wrangler,
 deploy it to the configured Cloudflare Worker with:
