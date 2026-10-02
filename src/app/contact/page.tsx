@@ -26,7 +26,7 @@ export default function Contact() {
                       <Mail className="h-6 w-6 opacity-60" />
                     </div>
                     <div className="ml-3 text-base opacity-70">
-                      <p>your.email@example.com</p>
+                      <p>giffgaffuk78459@icloud.com</p>
                     </div>
                   </div>
                 </div>
@@ -41,7 +41,7 @@ export default function Contact() {
                 </p>
                 <div className="mt-9">
                   <form
-                    action="https://formspree.io/f/mleyrgqy"
+                    action="https://formspree.io/f/mzezqnkn"
                     method="POST"
                     className="grid grid-cols-1 gap-y-6"
                   >
@@ -55,7 +55,7 @@ export default function Contact() {
                           name="name"
                           id="name"
                           autoComplete="name"
-                          placeholder="Your name"
+                          placeholder="Mengyang"
                         />
                       </div>
                     </Animated>
@@ -69,7 +69,7 @@ export default function Contact() {
                           name="email"
                           type="email"
                           autoComplete="email"
-                          placeholder="Your email"
+                          placeholder="giffgaffuk78459@icloud.com"
                         />
                       </div>
                     </Animated>

@@ -1,11 +1,8 @@
 {
-  "$schema": "https://unpkg.com/wrangler@4/config-schema.json",
-  "name": "nextjs-mdx-blog-template",
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mikeq95-blog",
   "main": "worker.js",
   "compatibility_date": "2026-07-15",
   "assets": { "directory": "out", "binding": "ASSETS" },
-  "routes": [
-    { "pattern": "www.mikeq95blog.uk", "custom_domain": true },
-    { "pattern": "mikeq95blog.uk", "custom_domain": true }
-  ]
+  "routes": [{ "pattern": "www.mikeq95blog.uk", "custom_domain": true }],
 }

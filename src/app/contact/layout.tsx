@@ -17,13 +17,8 @@ const contactJsonLd = {
   description: 'Contact page',
   mainEntity: {
     '@type': 'Person',
-    name: 'Your Name',
-    email: 'your.email@example.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'City',
-      addressCountry: 'Country',
-    },
+    name: 'Mengyang Yang',
+    email: 'giffgaffuk78459@icloud.com',
   },
 }
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CalendarIcon } from 'lucide-react'
-import { siGithub, siInstagram, siX } from 'simple-icons'
+import { siGithub } from 'simple-icons'
 import { fadeIn, fadeInSlideUp, scaleIn } from '@/lib/animations'
 import { getAllPosts } from '@/lib/mdx'
 import { getProjects } from '@/lib/projects'
@@ -175,50 +175,6 @@ export default async function Home() {
                     <path d={siGithub.path} />
                   </svg>
                   GitHub
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="min-w-[200px]"
-              >
-                <Link
-                  href="https://x.com/johnsomt5f1v?s=11"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    className="mr-2 h-5 w-5"
-                    fill="currentColor"
-                  >
-                    <path d={siX.path} />
-                  </svg>
-                  X (Twitter)
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="min-w-[200px]"
-              >
-                <Link
-                  href="https://www.instagram.com/krismorrow1983?stkn=anNzNTUybHcza2l6&utm_source=qr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    className="mr-2 h-5 w-5"
-                    fill="currentColor"
-                  >
-                    <path d={siInstagram.path} />
-                  </svg>
-                  Instagram
                 </Link>
               </Button>
             </div>

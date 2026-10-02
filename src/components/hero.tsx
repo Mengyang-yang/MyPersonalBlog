@@ -73,7 +73,7 @@ export function Hero() {
               size="lg"
               className="relative overflow-hidden"
             >
-              <Link href="https://github.com/loke-dev/nextjs-mdx-blog-template">
+              <Link href="https://github.com/Mengyang-yang/MyPersonalBlog">
                 <span className="relative z-10">Source code</span>
               </Link>
             </Button>

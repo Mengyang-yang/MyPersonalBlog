@@ -30,7 +30,7 @@ A minimalist blog template built with Next.js, MDX, and Tailwind CSS. Write post
 ## Get Started
 
 ```bash
-git clone https://github.com/loke-dev/nextjs-mdx-blog-template my-website
+git clone https://github.com/Mengyang-yang/MyPersonalBlog my-website
 cd my-website
 pnpm install
 pnpm dev
