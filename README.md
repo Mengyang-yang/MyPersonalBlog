@@ -97,8 +97,14 @@ This is the content of my post written in MDX.
 
 [Live demo](https://www.mikeq95blog.uk)
 
-The static export works on any static host. After authenticating Wrangler,
-deploy it to the configured Cloudflare Worker with:
+Pushes to `master` deploy automatically to the configured Cloudflare Worker
+through [the Cloudflare deployment workflow](./.github/workflows/deploy-cloudflare.yml).
+Add these repository secrets in GitHub before the first deployment:
+
+- `CLOUDFLARE_API_TOKEN` — an API token with permission to deploy Workers
+- `CLOUDFLARE_ACCOUNT_ID` — the Cloudflare account ID for the site
+
+You can also deploy locally after authenticating Wrangler:
 
 ```bash
 pnpm deploy
