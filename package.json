@@ -18,7 +18,7 @@
     "lint-staged": "lint-staged",
     "type-check": "tsc --noEmit",
     "ci-check": "pnpm check",
-    "deploy": "pnpm build && wrangler deploy",
+    "deploy": "next build --webpack && wrangler deploy",
     "deploy:dry": "pnpm build && wrangler deploy --dry-run",
     "prepare": "husky"
   },
