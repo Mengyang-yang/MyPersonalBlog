@@ -1,5 +1,5 @@
 import fs from 'fs/promises'
-import { readdirSync } from 'node:fs'
+import { readdir } from 'node:fs/promises'
 import path from 'node:path'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -11,8 +11,9 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 
-export function generateStaticParams() {
-  return readdirSync(path.join(process.cwd(), 'src/posts'))
+export async function generateStaticParams() {
+  const files = await readdir(path.join(process.cwd(), 'src/posts'))
+  return files
     .filter((file) => file.endsWith('.mdx'))
     .map((file) => ({
       slug: file.replace(/\.mdx$/, ''),
