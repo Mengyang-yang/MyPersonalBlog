@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Mengyang Yang Blog]]></title>
+        <description><![CDATA[Mengyang Yang Blog]]></description>
+        <link>https://www.mikeq95blog.uk</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 03 Oct 2026 04:25:13 GMT</lastBuildDate>
+        <atom:link href="https://www.mikeq95blog.uk/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[我的技术栈]]></title>
+            <description><![CDATA[介绍我目前学习和使用的编程语言、Web 技术与开发工具。]]></description>
+            <link>https://www.mikeq95blog.uk/posts/about-stack</link>
+            <guid isPermaLink="true">https://www.mikeq95blog.uk/posts/about-stack</guid>
+            <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[yt-dlp 下载备忘]]></title>
+            <description><![CDATA[记录使用 yt-dlp 下载 YouTube 和 B 站视频、播放列表及字幕的常用命令。]]></description>
+            <link>https://www.mikeq95blog.uk/posts/yt-bl-download-command</link>
+            <guid isPermaLink="true">https://www.mikeq95blog.uk/posts/yt-bl-download-command</guid>
+            <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
