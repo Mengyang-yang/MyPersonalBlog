@@ -97,7 +97,7 @@ This is the content of my post written in MDX.
 
 [Live demo](https://www.mikeq95blog.uk)
 
-Pushes to `master` deploy automatically to the configured Cloudflare Worker
+Pushes to `main` deploy automatically to the configured Cloudflare Worker
 through [the Cloudflare deployment workflow](./.github/workflows/deploy-cloudflare.yml).
 Add these repository secrets in GitHub before the first deployment:
 
