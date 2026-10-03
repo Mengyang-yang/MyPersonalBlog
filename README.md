@@ -95,7 +95,7 @@ This is the content of my post written in MDX.
 
 ## Deploy
 
-[Live demo](https://www.mikeq95blog.uk)
+[Live demo](https://mengyangblog.page)
 
 Pushes to `main` deploy automatically to the configured Cloudflare Worker
 through [the Cloudflare deployment workflow](./.github/workflows/deploy-cloudflare.yml).

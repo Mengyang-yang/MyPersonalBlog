@@ -15,7 +15,7 @@ export default function AboutLayout({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Mengyang Yang',
-    url: 'https://www.mikeq95blog.uk',
+    url: 'https://mengyangblog.page',
     jobTitle: 'Electronic Information Engineering Student',
     description:
       'An Electronic Information Engineering student who enjoys programming and building software with modern web technologies.',

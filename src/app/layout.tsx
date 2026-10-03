@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     default: 'Mikeq95 Blog',
     template: '%s | Mikeq95 Blog',
   },
-  metadataBase: new URL('https://www.mikeq95blog.uk'),
+  metadataBase: new URL('https://mengyangblog.page'),
   description: "Mengyang Yang's personal blog about programming and technology",
   authors: [{ name: 'Mengyang Yang' }],
   creator: 'Mengyang Yang',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.mikeq95blog.uk',
+    url: 'https://mengyangblog.page',
     siteName: 'Mikeq95 Blog',
     title: 'Mikeq95 Blog',
     description:

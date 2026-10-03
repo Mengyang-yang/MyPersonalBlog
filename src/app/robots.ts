@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.mikeq95blog.uk/sitemap.xml',
+    sitemap: 'https://mengyangblog.page/sitemap.xml',
   }
 }

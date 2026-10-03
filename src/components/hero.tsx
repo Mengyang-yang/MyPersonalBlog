@@ -63,7 +63,7 @@ export function Hero() {
             className="flex flex-wrap items-center gap-4"
           >
             <Button asChild size="lg" className="relative overflow-hidden">
-              <Link href="https://www.mikeq95blog.uk">
+              <Link href="https://mengyangblog.page">
                 <span className="relative z-10">About me</span>
               </Link>
             </Button>

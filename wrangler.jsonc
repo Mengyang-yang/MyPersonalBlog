@@ -4,5 +4,5 @@
   "main": "worker.js",
   "compatibility_date": "2026-07-15",
   "assets": { "directory": "out", "binding": "ASSETS" },
-  "routes": [{ "pattern": "www.mikeq95blog.uk", "custom_domain": true }],
+  "routes": [{ "pattern": "mengyangblog.page", "custom_domain": true }],
 }

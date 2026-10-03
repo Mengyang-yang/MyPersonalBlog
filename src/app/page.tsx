@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Mikeq95 Blog',
-    url: 'https://www.mikeq95blog.uk',
+    url: 'https://mengyangblog.page',
     description:
       "Mengyang Yang's personal blog about programming and technology",
   },
@@ -40,7 +40,7 @@ export default async function Home() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Mikeq95 Blog',
-    url: 'https://www.mikeq95blog.uk',
+    url: 'https://mengyangblog.page',
     description:
       "Mengyang Yang's personal blog about programming and technology",
     author: {
