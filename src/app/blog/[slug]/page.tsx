@@ -1,20 +1,22 @@
 import fs from 'fs/promises'
-import path from 'path'
+import { readdirSync } from 'node:fs'
+import path from 'node:path'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import matter from 'gray-matter'
 import { ArrowLeft } from 'lucide-react'
-import { getPostBySlug, getPostSlugs } from '@/lib/mdx'
+import { getPostBySlug } from '@/lib/mdx'
 import { MDXProvider } from '@/lib/mdx-provider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 
-export async function generateStaticParams() {
-  const slugs = await getPostSlugs()
-  return slugs.map((slug) => ({
-    slug: slug.replace(/\.mdx$/, ''),
-  }))
+export function generateStaticParams() {
+  return readdirSync(path.join(process.cwd(), 'src/posts'))
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => ({
+      slug: file.replace(/\.mdx$/, ''),
+    }))
 }
 
 export const dynamicParams = false
